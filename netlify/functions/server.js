@@ -36,6 +36,11 @@ router.get("/", async (req, res) => {
 
     const { dataUid, dataHmac } = encryptedResponse.data;
 
+    // Get the promotion count
+    const promotionCountByUid = await axios.get(
+      `${API_URL}/promosCountByuid/${DATA_APP_UUID}/${dataUid}/${dataHmac}`,
+    );
+
     // Sends values ​​to the frontend
     res.render("index", {
       dataUid,
@@ -43,6 +48,7 @@ router.get("/", async (req, res) => {
       dataName: DATA_NAME,
       pluginScriptUrl: PLUGIN_SCRIPT_URL,
       dataAppUuid: DATA_APP_UUID,
+      promotionCount: promotionCountByUid?.data?.promotionCount || 0
     });
   } catch (error) {
     res.status(500).send(JSON.stringify(error));

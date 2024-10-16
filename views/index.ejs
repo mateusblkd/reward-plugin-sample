@@ -5,7 +5,12 @@
     <%- include('partials/head') %>
   </head>
   <body>
-    <%- include('partials/content') %>
+    <div class="container py-3">
+      <header>
+        <%- include('partials/navbar') %>
+      </header>
+      <%- include('partials/content') %>
+    </div>
 
     <!-- Reward Plugin Script -->
     <script
@@ -15,6 +20,20 @@
       data-name="<%= dataName %>"
       data-hmac="<%= dataHmac %>"
     ></script>
+
+    <!-- Manually opens the Reward Modal when the link with the ID "rewardsLink" is clicked. -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const rewardsLink = document.getElementById('rewardsLink');
+
+        if (rewardsLink) {
+          rewardsLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.postMessage({ action: 'openRewardPlugin' }, '*');
+          });
+        }
+      });
+    </script>
 
     <%- include('partials/scripts') %>
   </body>
