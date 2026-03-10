@@ -2,6 +2,8 @@
 
 Welcome to the Reward Plugin Sample repository. This project demonstrates how to integrate the Reward Plugin into your application.
 
+**Documentation:** See [Reward Plugin Flow](docs/REWARDS-FLOW.md) for a detailed explanation of how the rewards loading works.
+
 ## Installation Instructions
 
 Follow these steps to set up the project locally:
