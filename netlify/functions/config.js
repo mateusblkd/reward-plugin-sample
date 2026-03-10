@@ -11,5 +11,5 @@ export const DATA_APP_UUID = "xxx...";
 // NOTE: These values should be dynamic based on the user's account.
 // Currently, static values are used here only for testing purposes.
 // In a real-world scenario, `UID` and `DATA_NAME` would be retrieved from the logged-in user's account information.
-export const UID = "develoer@beeliked.com";
+export const UID = "developer@beeliked.com";
 export const DATA_NAME = "Developer"; // User name that will be displayed in the plugin
