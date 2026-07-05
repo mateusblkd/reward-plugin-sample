@@ -1,7 +1,7 @@
 import express, { Router } from "express";
 import serverless from "serverless-http";
 import axios from "axios";
-import { API_URL, CLIENT_ID, CLIENT_SECRET, PLUGIN_SCRIPT_URL, DATA_APP_UUID, UID, DATA_NAME } from "./config";
+import { API_URL, CLIENT_ID, CLIENT_SECRET, PLUGIN_SCRIPT_URL, DATA_APP_UUID, UID, DATA_NAME, EMBED_CONFIG } from "./config";
 
 const app = express();
 const router = Router();
@@ -48,7 +48,9 @@ router.get("/", async (req, res) => {
       dataName: DATA_NAME,
       pluginScriptUrl: PLUGIN_SCRIPT_URL,
       dataAppUuid: DATA_APP_UUID,
-      promotionCount: promotionCountByUid?.data?.promotionCount || 0
+      promotionCount: promotionCountByUid?.data?.promotionCount || 0,
+      embedType: EMBED_CONFIG.type,
+      embedConfig: EMBED_CONFIG[EMBED_CONFIG.type],
     });
   } catch (error) {
     res.status(500).send(JSON.stringify(error));
