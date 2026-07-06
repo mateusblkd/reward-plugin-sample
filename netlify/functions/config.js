@@ -10,7 +10,7 @@ export const DATA_APP_UUID = "44f15880-e2a7-44d5-ab8e-4fa3e4b10494";
 
 // Embed configuration
 // Change only "type" to switch between embed modes: 'popup' | 'slide' | 'standard'
-export const EMBED_CONFIG = {
+export const EMBED_STYLE_CONFIG = {
   type: "slide",
 
   popup: {
