@@ -19,6 +19,12 @@
       data-uid="<%= dataUid %>"
       data-name="<%= dataName %>"
       data-hmac="<%= dataHmac %>"
+      data-embed-type="<%= embedType %>"
+      <% if (embedConfig?.height) { %>data-height="<%= embedConfig.height %>"<% } %>
+      <% if (embedConfig?.width) { %>data-width="<%= embedConfig.width %>"<% } %>
+      <% if (embedConfig?.position) { %>data-position="<%= embedConfig.position %>"<% } %>
+      <% if (embedConfig?.gameMode) { %>data-game-mode="<%= embedConfig.gameMode %>"<% } %>
+      <% if (embedConfig?.triggerId) { %>data-trigger-id="<%= embedConfig.triggerId %>"<% } %>
     ></script>
 
     <!-- Manually opens the Reward Modal when the link with the ID "rewardsLink" is clicked. -->
