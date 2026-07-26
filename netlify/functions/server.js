@@ -60,6 +60,7 @@ router.get("/", async (req, res) => {
       promotionCount: promotionCountByUid?.data?.promotionCount || 0,
       embedType: EMBED_STYLE_CONFIG.type,
       embedConfig: EMBED_STYLE_CONFIG[EMBED_STYLE_CONFIG.type],
+      defaultView: EMBED_STYLE_CONFIG.defaultView,
     });
   } catch (error) {
     res.status(500).send(JSON.stringify(error));

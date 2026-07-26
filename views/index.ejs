@@ -20,6 +20,7 @@
       data-name="<%= dataName %>"
       data-hmac="<%= dataHmac %>"
       data-embed-type="<%= embedType %>"
+      <% if (defaultView) { %>data-default-view="<%= defaultView %>"<% } %>
       <% if (embedConfig?.height) { %>data-height="<%= embedConfig.height %>"<% } %>
       <% if (embedConfig?.width) { %>data-width="<%= embedConfig.width %>"<% } %>
       <% if (embedConfig?.position) { %>data-position="<%= embedConfig.position %>"<% } %>

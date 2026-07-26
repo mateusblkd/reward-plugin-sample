@@ -19,6 +19,8 @@ export const DATA_NAME = "Developer"; // User name that will be displayed in the
 // Change only "type" to switch between embed modes: 'popup' | 'slide' | 'standard'
 export const EMBED_STYLE_CONFIG = {
   type: "popup",
+  // 'cards' (default) | 'list'
+  defaultView: "list",
   popup: {
     width: "1000px",
     height: "80vh",
